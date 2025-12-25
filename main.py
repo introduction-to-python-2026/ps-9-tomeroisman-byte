@@ -2,6 +2,9 @@
 !wget https://raw.githubusercontent.com/yotam-biu/python_utils/main/lab_setup_do_not_edit.py -O /content/lab_setup_do_not_edit.py
 import lab_setup_do_not_edit
 import pandas as pd
+for col in ['feature_A', 'feature_B']:
+    if col not in df.columns:
+        df[col] = default_value
 df = pd.read_csv('/content/parkinsons.csv')
 display(df.head())
 input_features = ['MDVP:Fo(Hz)', 'MDVP:Jitter(%)']
